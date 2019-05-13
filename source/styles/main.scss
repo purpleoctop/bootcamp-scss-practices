@@ -14,28 +14,34 @@ body {
 $color-1: #A47503;
 $color-2: #FFC12D;
 $color-3: #F9B718;
+$color-4: #C89210;
+$color-5: #B18009;
 
-$color-4: #558502;
-$color-5: #97E411;
-$color-6: #7BC200;
+$color-6: #558502;
+$color-7: #97E411;
+$color-8: #7BC200;
+$color-9: #A7EC2F;
 
-$color-7: #D52E13;
-$color-8: #FD7761;
-$color-9: #F55C43;
+$color-10: #D52E13;
+$color-11: #FD7761;
+$color-12: #F55C43;
+$color-13: #FEB1A4;
 
-$color-10: #0787D4;
-$color-11: #6FD9FC;
-$color-12: #47B4F6;
+$color-14: #0787D4;
+$color-15: #6FD9FC;
+$color-16: #47B4F6;
+$color-17: #85EBFA;
 
-$color-13: #5B568E;
-$color-14: #A39CDC;
-$color-15: #8781BD;
+$color-18: #5B568E;
+$color-19: #A39CDC;
+$color-20: #8781BD;
+$color-21: #AACDF6;
 
-$color-16: #E2E6E7;
-$color-17: #2C3E50;
-$color-18: #A1B1BC;
-$color-19: #CFD2D3;
-$color-20: #A2A4A5;
+$color-22: #E2E6E7;
+$color-23: #2C3E50;
+$color-24: #A1B1BC;
+$color-25: #CFD2D3;
+$color-26: #A2A4A5;
 
 main {
     display: flex;
@@ -64,7 +70,7 @@ section {
     display: flex;
     padding-left: 49px;
     padding-right: 90px;
-    border: 1px solid $color-16;
+    border: 1px solid $color-22;
     border-radius: 10px;
 
     &::before {
@@ -81,50 +87,67 @@ section {
         border-radius: 50%;
     }
 
-    &.warning::before {
-        content: '\f12a';
-        color: $color-1;
-        background-color: $color-2;
-        border-color: $color-3;
+    &.warning {
+        
+        &::before {
+            content: '\f12a';
+            color: $color-1;
+            background-color: $color-2;
+            border-color: $color-3;
+        }
+
+        &.solid::before {
+            border-color: $color-4;
+        }
     }
 
-    &.success::before {
-        content: '\f00c';
-        color: $color-4;
-        background-color: $color-5;
-        border-color: $color-6;
+    &.success {
+
+        &::before {
+            content: '\f00c';
+            color: $color-6;
+            background-color: $color-7;
+            border-color: $color-8;
+        }
     }
 
-    &.error::before {
-        content: '\f00d';
-        color: $color-7;
-        background-color: $color-8;
-        border-color: $color-9;
+    &.error {
+
+        &::before {
+            content: '\f00d';
+            color: $color-10;
+            background-color: $color-11;
+            border-color: $color-12;
+        }
     }
 
-    &.danger::before {
-        content: '\f0e7';
-        color: $color-10;
-        background-color: $color-11;
-        border-color: $color-12;
+    &.danger {
+        
+        &::before {
+            content: '\f0e7';
+            color: $color-14;
+            background-color: $color-15;
+            border-color: $color-16;
+        }
     }
 
     &.info {
         padding-right: 50px;
+
+        &::before {
+            content: '\f129';
+            color: $color-18;
+            background-color: $color-19;
+            border-color: $color-20;
+        }
     }
 
-    &.info::before {
-        content: '\f129';
-        color: $color-13;
-        background-color: $color-14;
-        border-color: $color-15;
-    }
 
     div {
         margin-top: 35px;
 
         h1 {
-            color: $color-17;
+            color: $color-23;
             font-size: 14px;
             font-weight: 900;
             font-family: 'Lato';
@@ -136,7 +159,7 @@ section {
         }
 
         p {
-            color: $color-18;
+            color: $color-24;
             font-size: 14px;
             font-weight: normal;
             font-family: 'Lato';
@@ -149,16 +172,133 @@ section {
         top: 16.9px;
         right: 18px;
         font-size: 14px;
-        color: $color-19;
+        color: $color-25;
 
         &:hover {
-            color: $color-20;
+            color: $color-26;
         }
 
         &::before {
             content: '\f00d';
             font-family: 'FontAwesome';
             display: inline-block;
+        }
+    }
+
+    &.solid {
+        
+        p {
+            color: $color-23;
+        }
+
+        &.warning {
+            background-color: $color-2;
+            border-color: transparent;
+
+            &::before {
+                color: $color-1;
+                background-color: $color-2;
+            }
+    
+            &.solid::before {
+                border-color: $color-4;
+            }
+
+            a {
+                color: $color-5;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.success {
+            background-color: $color-9;
+            border-color: transparent;
+
+            &::before {
+                color: $color-6;
+                background-color: $color-7;
+            }
+    
+            &.solid::before {
+                border-color: $color-8;
+            }
+
+            a {
+                color: $color-6;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.error {
+            background-color: $color-13;
+            border-color: transparent;
+
+            &::before {
+                color: $color-10;
+                background-color: $color-13;
+            }
+    
+            &.solid::before {
+                border-color: $color-12;
+            }
+
+            a {
+                color: $color-10;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.danger {
+            background-color: $color-17;
+            border-color: transparent;
+
+            &::before {
+                color: $color-14;
+                background-color: $color-17;
+            }
+    
+            &.solid::before {
+                border-color: $color-16;
+            }
+
+            a {
+                color: $color-14;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.info {
+            background-color: $color-21;
+            border-color: transparent;
+
+            &::before {
+                color: $color-18;
+                background-color: $color-21;
+            }
+    
+            &.solid::before {
+                border-color: $color-20;
+            }
+
+            a {
+                color: $color-18;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
         }
     }
 }
