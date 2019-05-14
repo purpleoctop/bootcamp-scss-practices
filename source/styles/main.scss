@@ -58,7 +58,7 @@ section{
         width:1170px;
 
    }
-
+   
     &::before {
         font-family: 'FontAwesome';
         display: inline-flex;
@@ -107,7 +107,16 @@ section{
         background-color: $color-14;
         border-color: $color-15;
         }
+       
+        &.bg{
+            &-1{ background-color: $color-2;}
+            &-2{ background-color: $color-5;}
+            &-3{ background-color: $color-8;}
+            &-4{ background-color: $color-11;}
+            &-5{ background-color: $color-14;}
 
+           
+        }
        
         
         
@@ -139,7 +148,7 @@ h1{
         font-family: 'Lato';
         font-size:14px;
         line-height:24px;
-        color:$color-18;
+        color:$color-17;
         margin-top: 6px;
 
         
@@ -154,12 +163,22 @@ h1{
 
 .exit{
     margin-top:12.6px;
+    &.ex{
+        &-1{color: $color-1;}
+        &-2{color: $color-4;}
+        &-3{color: $color-7;}
+        &-4{color: $color-10;}
+        &-5{color: $color-13;}
+     }
 }
 
 .exit::before{
     font-family: 'FontAwesome';
     font-size: 14px;
     line-height: 24px;
-    color:$color-19;
     content:'\f00d';
+    
+
 }
+
+
