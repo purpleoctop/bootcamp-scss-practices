@@ -1,0 +1,118 @@
+
+section {
+    display: flex;
+    width: 570px;
+    height: 150px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding-right: 18.9px;
+    padding-left: 49px;
+    border: 1px solid $color-16;
+    border-radius: 10px;
+
+    &:nth-child(5) {
+        width: 1170px;
+    }
+
+    &::before {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin: 42px 29px 42px 0;
+        border: 7px solid;
+        border-radius: 50%;
+        font-family: 'FontAwesome';
+        font-size: 24px;
+    }
+
+    &.logo-1::before {
+        content: '\f12a';
+        border-color: $color-3;
+        background-color: $color-2;
+        color: $color-1;
+    }
+
+    &.logo-2::before {
+        content: '\f00c';
+        border-color: $color-6;
+        background-color: $color-5;
+        color: $color-4;
+    }
+
+    &.logo-3::before {
+        content: '\f00d';
+        border-color: $color-9;
+        background-color: $color-8;
+        color: $color-7;
+    }
+
+    &.logo-4::before {
+        content: '\f0e7';
+        border-color: $color-12;
+        background-color: $color-11;
+        color: $color-10;
+    }
+
+    &.logo-5::before {
+        content: '\f129';
+        border-color: $color-15;
+        background-color: $color-14;
+        color: $color-13;
+    }
+
+    &.bg {
+        &-1 { background-color: $color-2; }
+        &-2 { background-color: $color-5; }
+        &-3 { background-color: $color-8; }
+        &-4 { background-color: $color-11; }
+        &-5 { background-color: $color-14; }
+    }
+}
+
+.text {
+    margin-top: 34px;
+    margin-right: 55px;
+
+    &.longer {
+        margin-right: 20px;
+    }
+
+    h1 {
+        color: $color-17;
+        font-family: 'Lato';
+        font-size: 14px;
+        font-weight: bolder;
+        letter-spacing: 1.4px;
+        line-height: 26px;
+    }
+
+    p {
+        margin-top: 6px;
+        color: $color-17;
+        font-family: 'Lato';
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.exit {
+    margin-top: 12.6px;
+
+    &.ex {
+        &-1 { color: $color-1; }
+        &-2 { color: $color-4; }
+        &-3 { color: $color-7; }
+        &-4 { color: $color-10; }
+        &-5 { color: $color-13; }
+    }
+}
+
+.exit::before {
+    content: '\f00d';
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
