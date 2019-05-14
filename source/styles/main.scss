@@ -1,3 +1,11 @@
+$color-1:#E9ECED;
+$color-2:#A47503;
+$color-3:#F9B718;
+$color-4:#FFC12D;
+$color-5:#2C3E50;
+$color-6:#C3CDD4;
+$color-7:#CFD2D3;
+
 * {
     padding: 0;
     margin: 0;
@@ -10,295 +18,71 @@ body {
     padding-top: 50px;
     padding-left: 50px;
 }
+ 
 
-$color-1: #A47503;
-$color-2: #FFC12D;
-$color-3: #F9B718;
-$color-4: #C89210;
-$color-5: #B18009;
-
-$color-6: #558502;
-$color-7: #97E411;
-$color-8: #7BC200;
-$color-9: #A7EC2F;
-
-$color-10: #D52E13;
-$color-11: #FD7761;
-$color-12: #F55C43;
-$color-13: #FEB1A4;
-
-$color-14: #0787D4;
-$color-15: #6FD9FC;
-$color-16: #47B4F6;
-$color-17: #85EBFA;
-
-$color-18: #5B568E;
-$color-19: #A39CDC;
-$color-20: #8781BD;
-$color-21: #AACDF6;
-
-$color-22: #E2E6E7;
-$color-23: #2C3E50;
-$color-24: #A1B1BC;
-$color-25: #CFD2D3;
-$color-26: #A2A4A5;
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.wrapper {
-    width: 570px;
-
-    &.col-2 {
-        width: 1140px;
-    }
-
-    section {
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
-
-    &:last-child {
-        margin: 0;
-    }
-}
-
-section {
-    position: relative;
-    display: flex;
-    padding-left: 49px;
-    padding-right: 90px;
-    border: 1px solid $color-22;
-    border-radius: 10px;
+section{
+    width:570px;
+    height:150px;
+    border:1px solid $color-1;
+    border-radius:10px;
+    display:flex;
+    padding-left:49px;
+    padding-right: 18.9px;
 
     &::before {
+        content: '\f12a';
+        font-family: 'FontAwesome';
         display: inline-flex;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
         width: 50px;
         height: 50px;
-        margin: 42px 28px 42px 0;
+        margin: 42px 29px 42px 0;
+        color: $color-2;
         font-size: 24px;
-        font-family: 'FontAwesome';
-        border: 7px solid transparent;
+        border: 7px solid $color-3;
         border-radius: 50%;
+        background-color: $color-4;
+    }
+}
+
+
+
+.text{
+    margin-top: 34px;
+    margin-right: 55px;
+h1{
+        font-family: 'Lato';
+        font-size:14px;
+        line-height:26px;
+        letter-spacing: 1.4px;
+        font-weight:bolder;
+        color:$color-5;
     }
 
-    &.warning {
-        
-        &::before {
-            content: '\f12a';
-            color: $color-1;
-            background-color: $color-2;
-            border-color: $color-3;
-        }
-
-        &.solid::before {
-            border-color: $color-4;
-        }
+    p{
+        font-family: 'Lato';
+        font-size:14px;
+        line-height:24px;
+        color:$color-6;
+        margin-top: 6px;
+       
     }
-
-    &.success {
-
-        &::before {
-            content: '\f00c';
-            color: $color-6;
-            background-color: $color-7;
-            border-color: $color-8;
-        }
-    }
-
-    &.error {
-
-        &::before {
-            content: '\f00d';
-            color: $color-10;
-            background-color: $color-11;
-            border-color: $color-12;
-        }
-    }
-
-    &.danger {
-        
-        &::before {
-            content: '\f0e7';
-            color: $color-14;
-            background-color: $color-15;
-            border-color: $color-16;
-        }
-    }
-
-    &.info {
-        padding-right: 50px;
-
-        &::before {
-            content: '\f129';
-            color: $color-18;
-            background-color: $color-19;
-            border-color: $color-20;
-        }
-    }
+}
 
 
-    div {
-        margin-top: 35px;
 
-        h1 {
-            color: $color-23;
-            font-size: 14px;
-            font-weight: 900;
-            font-family: 'Lato';
-            line-height: 24px;
-            letter-spacing: 1.3px;
-            word-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 7px;
-        }
-
-        p {
-            color: $color-24;
-            font-size: 14px;
-            font-weight: normal;
-            font-family: 'Lato';
-            line-height: 24px;
-        }
-    }
+.exit{
+    margin-top:12.6px;
     
-    a {
-        position: absolute;
-        top: 16.9px;
-        right: 18px;
-        font-size: 14px;
-        color: $color-25;
+ 
+}
 
-        &:hover {
-            color: $color-26;
-        }
-
-        &::before {
-            content: '\f00d';
-            font-family: 'FontAwesome';
-            display: inline-block;
-        }
-    }
-
-    &.solid {
-        
-        p {
-            color: $color-23;
-        }
-
-        &.warning {
-            background-color: $color-2;
-            border-color: transparent;
-
-            &::before {
-                color: $color-1;
-                background-color: $color-2;
-            }
-    
-            &.solid::before {
-                border-color: $color-4;
-            }
-
-            a {
-                color: $color-5;
-
-                &:hover {
-                    color: $color-23;
-                }
-            }
-        }
-
-        &.success {
-            background-color: $color-9;
-            border-color: transparent;
-
-            &::before {
-                color: $color-6;
-                background-color: $color-7;
-            }
-    
-            &.solid::before {
-                border-color: $color-8;
-            }
-
-            a {
-                color: $color-6;
-
-                &:hover {
-                    color: $color-23;
-                }
-            }
-        }
-
-        &.error {
-            background-color: $color-13;
-            border-color: transparent;
-
-            &::before {
-                color: $color-10;
-                background-color: $color-13;
-            }
-    
-            &.solid::before {
-                border-color: $color-12;
-            }
-
-            a {
-                color: $color-10;
-
-                &:hover {
-                    color: $color-23;
-                }
-            }
-        }
-
-        &.danger {
-            background-color: $color-17;
-            border-color: transparent;
-
-            &::before {
-                color: $color-14;
-                background-color: $color-17;
-            }
-    
-            &.solid::before {
-                border-color: $color-16;
-            }
-
-            a {
-                color: $color-14;
-
-                &:hover {
-                    color: $color-23;
-                }
-            }
-        }
-
-        &.info {
-            background-color: $color-21;
-            border-color: transparent;
-
-            &::before {
-                color: $color-18;
-                background-color: $color-21;
-            }
-    
-            &.solid::before {
-                border-color: $color-20;
-            }
-
-            a {
-                color: $color-18;
-
-                &:hover {
-                    color: $color-23;
-                }
-            }
-        }
-    }
+.exit::before{
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    line-height: 24px;
+    color:$color-7;
+    content:'\f00d';
 }

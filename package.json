@@ -7,10 +7,6 @@
   "license": "MIT",
   "scripts": {
     "server": "light-server -s ./dist/",
-    "development": "gulp"
-  },
-  "scripts": {
-    "server": "light-server -s ./dist/",
     "lint:css": "stylelint \"./source/styles/**/*.scss\" --syntax scss",
     "lint:html": "htmllint \"./source/*.html\"",
     "lint": "yarn lint:css & yarn lint:html",
